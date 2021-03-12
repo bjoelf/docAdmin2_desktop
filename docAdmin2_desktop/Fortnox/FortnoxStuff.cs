@@ -5,12 +5,21 @@ using Fortnox.SDK.Connectors;
 using Fortnox.SDK.Entities;
 using System.Diagnostics;
 using System.Net.Http;
+using System.Diagnostics;
 
 namespace docAdmin2_desktop.Fortnox
 {
     public class FortnoxStuff
     {
-        //TODO: Lägg lite settings i constructorn!
+        //TODO: Lägg till settings för FortnoxClient i constructorn?
+        public static string JSONtoFortnox(string comment)
+        {
+            return comment.Replace('{', '(').Replace('}', ')').Replace('[', '&').Replace(']', '%');
+        }
+        public static string FortnoxToJSON(string comment)
+        {
+            return comment.Replace('(', '{').Replace(')', '}').Replace('&', '[').Replace('%', ']');
+        }
 
         static FortnoxClient client()
         {

@@ -27,7 +27,7 @@ namespace docAdmin2_desktop.Data
 
             foreach (ExamModel row in FileRows)
             {
-                //TODO: Implement loop! :)
+                //TODO: Implement Exams to Orders loop
 
             }
             return orders;

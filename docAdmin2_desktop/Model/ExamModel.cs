@@ -4,7 +4,7 @@ using System.Text;
 
 namespace docAdmin2_desktop.Model
 {
-    class ExamModel
+    public class ExamModel
     {
         public string doctor { get; set; }
         public string examType { get; set; }
